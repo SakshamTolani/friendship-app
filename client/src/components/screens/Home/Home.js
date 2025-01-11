@@ -19,7 +19,6 @@ const Home = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
         setData(result.posts);
         setLoading(false);
       })
@@ -89,7 +88,6 @@ const Home = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
         const newData = data.map((item) => {
           if (item._id == result._id) {
             return result;
@@ -112,7 +110,6 @@ const Home = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
         const newData = data.filter((item) => {
           return item._id !== result._id;
         });

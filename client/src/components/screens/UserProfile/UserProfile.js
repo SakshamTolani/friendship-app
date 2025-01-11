@@ -19,7 +19,6 @@ const UserProfile = () => {
             .then(res => res.json())
             .then(result => {
                 setProfile(result);
-                console.log(result);
                 // Check friendship status
                 if (result.user.friends.length != 0 && result.user.friends.includes(state._id)) {
                     setRequestStatus('friends');
@@ -32,7 +31,6 @@ const UserProfile = () => {
                     })
                         .then(res => res.json())
                         .then(data => {
-                            console.log(data);
                             if (data.exists) {
                                 setRequestStatus('pending');
                             }
