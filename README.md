@@ -98,10 +98,43 @@ A social networking application that allows users to connect, share posts, and m
 
 Make sure to create a `.env` file in the `server` directory with the following variables:
 
+```
 MONGOURI=<Your MongoDB URI>
 JWT_SECRET=<Your JWT Secret>
 SENDGRID_API=<Your SendGrid API Key>
 EMAIL=<Your Email>
+```
+
+## Client Environment Variables
+
+The client application requires certain environment variables to be set in the `.env` file. This file should be located in the `client` directory. Below are the required variables and their descriptions:
+
+### Configuration
+
+Create a `.env` file in the `client` directory with the following content:
+
+```
+REACT_APP_CLOUDINARY_PLACEHOLDER=https://res.cloudinary.com/sakshamtolani/image/upload/v1736591256/ifghradhluaq9tyuwenw.png
+REACT_APP_CLOUDINARY_UPLOAD=https://api.cloudinary.com/v1_1/<your_username>/image/upload
+REACT_APP_CLOUDINARY_CLOUD_NAME=<cloudinary_cloud_name>
+REACT_APP_CLOUDINARY_UPLOAD_PRESET=<cloudinary_upload_preset_name>
+```
+
+### Variable Descriptions
+
+- **REACT_APP_CLOUDINARY_PLACEHOLDER**: URL of the placeholder image to be used while uploading images to Cloudinary.
+- **REACT_APP_CLOUDINARY_UPLOAD**: The Cloudinary API endpoint for uploading images.
+- **REACT_APP_CLOUDINARY_CLOUD_NAME**: Your Cloudinary cloud name, which is required for API requests.
+- **REACT_APP_CLOUDINARY_UPLOAD_PRESET**: The upload preset configured in your Cloudinary account, which defines the settings for the upload.
+
+### Instructions
+
+1. Create a new file named `.env` in the `client` directory.
+2. Copy and paste the above configuration into the `.env` file.
+3. Save the file.
+4. Restart your development server to ensure the environment variables are loaded.
+
+Make sure to keep your `.env` file secure and do not share it publicly, as it contains sensitive information related to your Cloudinary account.
 
 
 ## Contributing
