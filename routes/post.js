@@ -38,7 +38,6 @@ router.post("/createpost", requireLogin, async (req, res) => {
   }
   try {
     req.user.password = undefined;
-    console.log(req.user);
     const post = new Post({
       title,
       body,

@@ -22,7 +22,6 @@ const Routing = () => {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"))
-    console.log("Routing - User from localStorage:", user)
     if (user) {
       dispatch({ type: "USER", payload: user })
     } else {
@@ -52,7 +51,6 @@ function App() {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"))
-    console.log("App - Initial user load:", user)
     if (user) {
       dispatch({ type: "USER", payload: user })
     }

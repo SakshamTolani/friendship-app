@@ -16,7 +16,6 @@ const SubscribedUserPosts = () => {
             }
         }).then(res => res.json())
             .then(result => {
-                console.log(result)
                 setData(result.posts)
                 setLoading(false)
             })
@@ -87,7 +86,6 @@ const SubscribedUserPosts = () => {
             })
         }).then(res => res.json())
             .then(result => {
-                console.log("Comment response:", result);
                 const newData = data.map(item => {
                     if (item._id === result._id) {
                         return {
@@ -123,7 +121,6 @@ const SubscribedUserPosts = () => {
             }
         }).then(res => res.json())
             .then(result => {
-                console.log(result)
                 const newData = data.filter(item => {
                     return item._id !== result._id
                 })

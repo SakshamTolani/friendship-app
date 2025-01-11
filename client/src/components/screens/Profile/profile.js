@@ -16,7 +16,6 @@ const Profile = () => {
 
   useEffect(() => {
     // Log the initial state
-    console.log("Profile state:", state);
 
     if (!state) {
       setLoading(true);
@@ -93,7 +92,6 @@ const Profile = () => {
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log("Friend requests:", result);
           setFriendRequests(result || []);
         })
         .catch((err) => {
@@ -142,12 +140,6 @@ const Profile = () => {
         });
     }
   }, [image]);
-
-  useEffect(() => {
-    console.log("Current state:", state);
-    console.log("Current friend requests:", friendRequests);
-    console.log("Current posts:", mypics);
-  }, [state, friendRequests, mypics]);
 
   const updatePhoto = (file) => {
     if (!file) {
