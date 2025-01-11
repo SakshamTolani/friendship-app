@@ -1,0 +1,6 @@
+module.exports = {
+    MONGOURI : "MONGODB_URI",
+    JWT_SECRET : "JWT_SECRET",
+    SENDGRID_API:"SENDGRID_KEY",
+    EMAIL:"EMAIL"
+}
