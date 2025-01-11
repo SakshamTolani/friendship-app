@@ -1,0 +1,146 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles that work alongside Tailwind */
+@layer base {
+  body {
+    @apply bg-gray-50;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .brand-logo, .brand-text {
+    font-family: 'Poppins', sans-serif;
+    @apply text-3xl font-bold;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .auth-card {
+    @apply bg-white rounded-xl shadow-lg p-8 max-w-md mx-auto my-8 transition-all;
+  }
+
+  .auth-card:hover {
+    @apply shadow-xl;
+  }
+
+  .input-field {
+    @apply relative mb-4;
+  }
+
+  .input-field input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg transition-all;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+
+  .btn {
+    @apply px-6 py-2 rounded-lg font-medium transition-all;
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white;
+    @apply hover:from-blue-600 hover:to-blue-700;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .gallery {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4;
+  }
+
+  .item {
+    @apply relative rounded-xl overflow-hidden aspect-square;
+  }
+
+  .item img {
+    @apply w-full h-full object-cover transition-transform hover:scale-105;
+  }
+
+  .home-card {
+    @apply max-w-2xl mx-auto bg-white rounded-xl shadow-lg my-6 overflow-hidden;
+  }
+
+  .collection-item {
+    @apply flex items-center space-x-3 p-4 hover:bg-gray-50 transition-colors;
+  }
+
+  /* Toast styling */
+  #toast-container {
+    @apply fixed top-4 right-4 z-50;
+  }
+
+  .toast {
+    @apply mb-2 p-4 rounded-lg shadow-lg text-white;
+    @apply transform transition-all duration-300;
+    @apply animate-slideIn;
+  }
+
+  .toast.success {
+    @apply bg-green-500;
+  }
+
+  .toast.error {
+    @apply bg-red-500;
+  }
+
+  /* Navigation */
+  .nav-wrapper {
+    @apply bg-white shadow-sm;
+  }
+
+  .nav-content {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply flex items-center justify-between h-16;
+  }
+
+  /* Profile section */
+  .profile-header {
+    @apply max-w-4xl mx-auto p-8;
+    @apply flex flex-col md:flex-row items-center md:items-start gap-8;
+  }
+
+  .profile-stats {
+    @apply flex gap-8 text-center md:text-left;
+  }
+
+  .profile-stat {
+    @apply flex flex-col;
+  }
+
+  .profile-stat-value {
+    @apply text-2xl font-bold;
+  }
+
+  .profile-stat-label {
+    @apply text-gray-600;
+  }
+
+  /* Create post form */
+  .create-post-card {
+    @apply max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6;
+  }
+
+  .file-input-wrapper {
+    @apply relative border-2 border-dashed border-gray-300 rounded-lg p-4;
+    @apply hover:border-blue-500 transition-colors cursor-pointer;
+  }
+
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slideIn {
+    animation: slideIn 0.3s ease-out;
+  }
+}
