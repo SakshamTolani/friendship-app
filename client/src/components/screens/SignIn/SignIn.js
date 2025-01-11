@@ -127,6 +127,14 @@ const SignIn = () => {
                 Don't have an account? <span className="underline">Sign up for free</span>
               </Link>
             </div>
+            <div className="text-center">
+              <Link
+                to="/reset"
+                className="text-sm font-medium text-blue-600 hover:text-blue-500 transition duration-150"
+              >
+                <span className="underline">Forgot Password?</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -61,10 +61,10 @@ const CreatePost = () => {
         setLoading(true);
         const data = new FormData();
         data.append("file", image);
-        data.append("upload_preset", "instagram");
-        data.append("cloud_name", "sakshamtolani");
+        data.append("upload_preset", process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET);
+        data.append("cloud_name", process.env.REACT_APP_CLOUDINARY_CLOUD_NAME);
 
-        fetch(`https://api.cloudinary.com/v1_1/sakshamtolani/image/upload`, {
+        fetch(process.env.REACT_APP_CLOUDINARY_UPLOAD, {
             method: "post",
             body: data
         })
