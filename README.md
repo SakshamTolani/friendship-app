@@ -97,11 +97,12 @@ A social networking application that allows users to connect, share posts, and m
 ## Environment Variables
 
 Make sure to create a `.env` file in the `server` directory with the following variables:
-
+```
 MONGOURI=<Your MongoDB URI>
 JWT_SECRET=<Your JWT Secret>
 SENDGRID_API=<Your SendGrid API Key>
 EMAIL=<Your Email>
+```
 
 
 ## Contributing
