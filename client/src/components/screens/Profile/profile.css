@@ -1,0 +1,234 @@
+.profile-container {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .profile-header-gradient {
+    height: 240px;
+    background: linear-gradient(135deg, #6200ee 0%, #9c42f5 50%, #de38f5 100%);
+  }
+  
+  .profile-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  .profile-card {
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+    margin-top: -120px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    position: relative;
+  }
+  
+  /* Loading Spinner */
+  .loading-spinner {
+    text-align: center;
+  }
+  
+  .spinner-ring {
+    width: 64px;
+    height: 64px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #6200ee;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  .spinner-text {
+    margin-top: 16px;
+    color: #6200ee;
+    font-weight: 600;
+  }
+  
+  /* Profile Image Section */
+  .profile-image-container {
+    margin-top: -80px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+  
+  .edit-photo-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: #6200ee;
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(98, 0, 238, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .edit-photo-button:hover {
+    transform: scale(1.1);
+    background: #5000c9;
+  }
+  
+  /* Stats Section */
+  .stats-container {
+    display: flex;
+    gap: 32px;
+    margin-top: 24px;
+  }
+  
+  .stat-item {
+    padding: 16px 24px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .stat-item:hover {
+    background: #f4f0ff;
+  }
+  
+  .stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #6200ee;
+  }
+  
+  .stat-label {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  /* Photo Grid */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+  }
+  
+  .photo-item {
+    aspect-ratio: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Modal */
+  .photo-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @media (max-width: 768px) {
+    .profile-card {
+      padding: 24px;
+      margin-top: -80px;
+    }
+  
+    .stats-container {
+      gap: 16px;
+    }
+  
+    .photo-grid {
+      gap: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-card {
+      padding: 16px;
+      border-radius: 16px;
+    }
+  
+    .profile-image {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  /* Add these new styles */
+  .upload-progress-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    backdrop-filter: blur(4px);
+  }
+  
+  .upload-progress-content {
+    background: white;
+    padding: 32px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  .upload-spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #6200ee;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  .upload-text {
+    margin-top: 16px;
+    color: #2d3436;
+    font-weight: 600;
+  }
+  
+  /* Update existing animation if needed */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Update existing styles to handle disabled state */
+  .form-input:disabled,
+  .submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background: #e0e0e0;
+  }
