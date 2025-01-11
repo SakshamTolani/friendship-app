@@ -15,6 +15,7 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    
     if (state) {
       fetch('/friend-requests', {
         headers: {
@@ -240,7 +241,7 @@ const NavBar = () => {
                     ) : search.length != 0 && (
                       <div className="flex flex-col items-center justify-center py-8 text-center">
                         <img
-                          src="https://res.cloudinary.com/sakshamtolani/image/upload/v1736591256/ifghradhluaq9tyuwenw.png"
+                          src={process.env.REACT_APP_CLOUDINARY_PLACEHOLDER}
                           alt="No Results"
                           className="h-24 w-24 mb-4"
                         />
